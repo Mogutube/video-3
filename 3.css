@@ -1,0 +1,92 @@
+.logo{
+	top:3px;
+	width:50%;
+}
+/* 動画を囲うdiv */
+.video {
+	padding-top: 49%;
+    width: 100%;
+    position: relative;
+  }
+  
+  /* YouTube埋め込み用のiframe */
+  .video iframe{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+  }
+
+  .text-title{
+	text-decoration: none;
+	color: black;
+	font-size:27px;
+	
+}
+
+.Description{
+	background:rgba(111, 114, 114, 0.282);
+	border-radius: 20px 20px 20px 20px;
+}
+
+*{
+	font-family: arial,sans-serif;
+}
+.side {
+	background-color:#d6d3d3af;
+	width:15%;
+	text-align:center;
+	border-radius: 0px 20px 20px 0px;
+	min-width: 5rem;
+} 
+article {
+	display:flex;/*サイドバーとメインコンテンツを横並びにする指定をした*/
+	
+}
+.form_input{
+	border:0;
+padding:10px;
+font-size:1.3em;
+font-family:Arial, sans-serif;
+color:#000000;
+border:solid 1px #ccc;
+margin:0 0 20px;
+width:80%;
+-webkit-border-radius: 3px;
+-moz-border-radius: 3px;
+border-radius: 3px;
+}
+
+.form_input2{
+	border:0;
+padding:10px;
+font-size:1.3em;
+font-family:Arial, sans-serif;
+color:#000000;
+border:solid 1px #ccc;
+margin:0 0 20px;
+width:80%;
+-webkit-border-radius: 3px;
+-moz-border-radius: 3px;
+border-radius: 3px;
+resize: none;
+height:20% ;
+}
+
+.form_label{
+	font-size: 15px;
+}
+
+.form_submit{
+	color:black;
+	width: 50%; 
+	height: 40%;
+	font-size: 1vh;
+}
+.comment{
+	font-size: 1vh;
+}
+.comment-title{
+	font-size: 1.3vh;
+}

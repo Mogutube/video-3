@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+        <link rel="stylesheet" href="./3.css">
+        <title>【ヒカマニ】初ヒカマニ</title>
+        <meta  charset="utf-8">
+    </head>
+    <body>
+        <a href="https://mogutube.github.io/Home/"><img class="logo" src="mogutube-logo.png"></a>
+        <h2>再生する際は、設定マークから、解像度を高くして再生してください。</h2>
+        <hr>
+        <article>
+            <div class="video">
+                <iframe src="https://drive.google.com/file/d/1bx0bWMV_i7V1mS9xGWgBBIW3khSFBjn1/preview" allow="autoplay" allowfullscreen></iframe>
+            </div>
+           
+           <div class="side">
+                <h1 class="comment-title">コメント</h1>
+                <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScqr9OldDgTZ6_kZ6z0SITg6hYHs71LAR3rWqlVHgKhwiqmFg/formResponse" target="hidden_iframe" method="post" onsubmit="return test(this.wcheck.value)">
+
+                    <label class="form_label" for="field-name">名前</label>
+                    <p><input class="form_input" name="entry.1283584671" placeholder="例：匿名モグ"  required></p>
+                    <label class="form_label" for="field-name">コメント</label>
+                    <p><textarea class="form_input2" name="entry.11912194" id="wcheck" placeholder="例：おもしろかったです！" required></textarea></p>
+                    <input class="form_submit" type="submit" id="submitbutton" value="送信">
+                    </form>
+                
+             
+                    <iframe onload='if(submitted){window.location="";}' id="hidden_iframe" name="hidden_iframe" style="display:none"></iframe>
+                    
+                    <script type="text/javascript">
+                    var NGComments = ["死ね","バカ",".exe"]; // 簡易的なNGワードの設定
+                    var regex = new RegExp(NGComments.join("|"));
+                    function test(wcheck) {
+                        if (wcheck.match(regex) != null) {
+                            alert("ERROR: コメントにNGワードが含まれています");
+                            return false;
+                        }
+                        document.getElementById("submitbutton").disabled = true;
+                        textareas = document.getElementsByTagName('textarea');
+                        for(var i=0 ;i < textareas.length ;i ++ ){
+                            textareas[i].value = textareas[i].value.replace( /</g ,'&lt;' );
+                        }
+                        inputs = document.getElementsByTagName('input');
+                        for(var i=0 ;i < inputs.length ;i ++ ){
+                            inputs[i].value = inputs[i].value.replace( /</g ,'&lt;' );
+                        }
+                        return submitted=!0;
+                    }
+                    </script>
+    
+                <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+                <br>
+                <br>
+                <hr>
+                <br>
+                <div id="comments" class="comment"><p>読み込み中....</p></div>
+        <script>
+        d3.csv("https://docs.google.com/spreadsheets/d/1-1RF-slAPybvF5DMAWxKTK4cgMJIXL74zVzNqxrBaMg/export?format=csv&range=A3:D", function(error, data){
+            var text = "";
+            for(var i=0; i<data.length; i++){
+            text += i+1 + " 名前:" + data[i].Name + "</a> " + data[i].Timestamp + "<pre>" + data[i].Comment + "</pre>";
+                }
+        d3.select("#comments").html(text);
+        });
+        </script>
+                    </div>
+    
+            </article>
+      
+<br>
+  <div class="Description">
+            <h1 class="text-title">【ヒカマニ】初ヒカマニ</h1>
+            <br>
+            <h2>　2023年9月11日に公開</h2> 
+            <br>
+            <h1>　初めて作りました！</h1>
+            <h1>　使用したYOASOBIの曲：<a href="https://www.youtube.com/watch?v=2-c0DFt6vK4">https://www.youtube.com/watch?v=2-c0DFt6vK4</a></h1>
+            <br>
+        </div>
+    </body>
+</html>
